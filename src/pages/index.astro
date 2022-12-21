@@ -1,0 +1,156 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import HomeCard from '../components/HomeCard.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<div id="swup" class="transition-fade">
+			<header id="home-header">
+				<nav>
+					<a class="underline" href="/about">About</a>
+					<a class="underline" href="/blog">Blog</a>
+					<a class="underline" href="/music">Music</a>
+				</nav>
+			</header>
+			<main id="home-main">
+				<section id="home-hero">
+					<div>
+						<h1>Thomas Vidas</h1>
+						<h6>software engineer</h6>
+					</div>
+				</section>
+				<section id="home-cards">
+					<div>
+						<HomeCard
+							title="Stax Payments"
+							description="A unicorn startup in the payment processing space. I'm the principal engineer leading all things mobile and embedded."
+							link="/projects/stax"
+							image="/assets/img/stax-card.png"
+						/>
+					</div>
+					<div>
+						<HomeCard
+							title="Ionic"
+							description="An open-source company that maintains Ionic Framework, Capacitor, and Stencil. I was a core contributor to Capacitor."
+							link="/projects/ionic"
+							image="/assets/img/capacitor-card.png"
+						/>
+					</div>
+					<div>
+						<HomeCard
+							title="Kinopio"
+							description="A 3D platforming framework built with Unity. Provides a foundation for a player controller similar to Super Mario games."
+							link="/projects/kinopio"
+							image="/assets/img/kinopio-card.png"
+						/>
+					</div>
+					<div>
+						<HomeCard
+							title="And more..."
+							description="More projects coming soon! This site is still under construction; I'm still compiling all the cool things I've worked on."
+							link=""
+							image="http://placekitten.com/301/200"
+						/>
+					</div>
+				</section>
+			</main>
+	
+			<footer id="home-footer">
+				<hr/>
+				<section id="home-footer-links">
+					<a href="https://github.com/thomasvidas">GitHub</a>
+					<a href="https://linkedin.com/in/thomas-vidas">LinkedIn</a>
+					<a href="https://twitter.com/thomasvidas">Twitter</a>
+				</section>
+			</footer>
+		</div>
+
+		<script src="../scripts/swup.js"></script>
+	</body>
+</html>
+
+<style lang="scss">
+	#home-header {
+		display: flex;
+		justify-content: end;
+		a {
+			font-weight: 600;
+			margin: 0.75rem;
+		}
+	}
+
+	#home-main {
+		#home-hero {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 80vh;
+
+			h1, h6 {
+				margin: 0;
+			}
+
+			h1 {
+				font-weight: 800;
+				font-size: 6rem;
+
+				@media screen and (max-width: 930px) {
+        	font-size: 4rem;
+				}
+				@media screen and (max-width: 620px) {
+        	font-size: 3rem;
+				}
+				@media screen and (max-width: 500px) {
+        	font-size: 2.5rem;
+					text-align: center;
+				}
+			}
+
+			h6 {
+				font-size: 2rem;
+				text-align: right;
+
+				@media screen and (max-width: 500px) {
+        	font-size: 1.5rem;
+					text-align: center;
+				}
+			}
+		}
+
+		#home-cards {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			div {
+				margin: 0.75rem;
+				flex-basis: calc(33% - 1.5rem);
+
+				@media screen and (max-width: 768px) {
+        	flex-basis: calc(50% - 1.5rem);
+				}
+
+				@media screen and (max-width: 560px) {
+					display: block;
+					flex-basis: calc(100%);
+				}
+			}
+		}
+	}
+
+	#home-footer {
+		#home-footer-links {
+			display: flex;
+			justify-content: center;
+			a {
+				margin: 0.75rem;
+			}
+		}
+	}
+</style>

@@ -1,0 +1,84 @@
+body {
+	max-width: 75vw;
+	padding: 2rem;
+	margin: auto;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+a {
+	color: #32936F;
+	text-decoration: none;
+}
+
+a:hover {
+	filter: brightness(1.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+}
+
+p, div, header, main, nav, li, a {
+	font-family: 'Hind', sans-serif;
+}
+
+p, div, header, main, nav, li {
+	font-weight: 300;
+}
+
+strong {
+	font-weight: 600;
+}
+
+pre, code {
+	font-family: 'Source Code Pro', monospace;
+}
+
+/* swup */
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+
+/* Themes */
+.theme a {
+	font-weight: 600;
+	transition: all 0.25s ease-out;
+}
+
+.theme.stax {
+	color: white;
+	background-color: #062333;
+}
+
+.theme.stax a {
+	color: #49C59E
+}
+
+.theme.ionic {
+	color: white;
+	background-color: #3880ff;
+}
+
+.theme.ionic a {
+	color: #ffc409;
+}
+
+.theme.kinopio {
+	color: white;
+	background-color: #440D0F;
+}
+
+.theme.kinopio a {
+	color: #F7DBA7;
+}

@@ -1,0 +1,106 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+
+const title = "Hello - Thomas Vidas";
+const description = "Thomas Vidas' super cool about page";
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+
+	<body>
+    <div id="swup" class="transition-fade">
+      <header>
+        <nav>
+          <a href="/">
+            <span class="card-arrow reverse">➤</span>
+            <strong>Back</strong>
+          </a>
+        </nav>
+      </header>
+      <main id="post-main">
+        <article>
+          <section>
+            <div>
+              <h1 class="title">Hello 👋</h1>
+              <p>
+                I'm Thomas, a software engineer living in Boston, MA. I'm currently a
+                <strong>Principal Software Engineer</strong> at
+                <strong><a class="underline" href="https://staxpayments.com">Stax Payments</a></strong>
+                focused on revamping what their payment experience looks like on mobile.
+              </p>
+              <p>
+                I like making things that are pleasant to use, integrate with, or experience.
+                Whether it's a contributing to a new way of making mobile apps with web tools,
+                writing <strong><a class="underline" href="/music">music</a></strong>, or making games; I like to build it all!
+              </p>
+            </div>
+            <img src="/assets/img/me.png" />
+          </section>
+        </article>
+      </main>
+    </div>
+    <script src="../scripts/swup.js"></script>
+	</body>
+</html>
+
+<style lang="scss">
+  a {
+    &:hover {
+      .card-arrow.reverse {
+        transform: rotate(180deg)translateY(3px)translateX(4px);
+      }   
+    }
+  }
+  .card-arrow.reverse {
+    display: inline-block;
+    transform: rotate(180deg)translateY(3px);
+    transition: 0.25s all ease-out;
+  }
+
+  #post-main {
+    display: flex;
+    align-items: center;
+    margin: 6rem 0;
+
+    @media screen and (max-width: 800px) {
+      margin: 3rem 0;
+    }
+
+    .title {
+      font-size: 6rem;
+      margin: 0.5rem 0;
+    }
+
+    article {
+      font-size: 1.2rem;
+    }
+
+    img {
+      width: auto;
+      height: auto;
+      max-width: 400px;
+      max-height: 400px;
+      border-radius: 8px;
+      margin-left: 1rem;
+
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+
+      div {
+        flex-basis: 75%;
+      }
+      img {
+        flex-basis: 25%;
+      }
+    }
+  }
+</style>
