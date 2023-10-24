@@ -1,0 +1,14 @@
+.card * {
+  transition: all 0.25s ease-out;
+}
+
+.card img {
+  border-radius: 8px;
+  height: 200px;
+}
+
+.card:hover img {
+  transform: translateY(-4px);
+  filter: brightness(1.05);
+  box-shadow: 0 2px 4px black;
+}

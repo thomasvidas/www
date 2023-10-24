@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+}
+
+.navbar li:first-child {
+  margin-left: auto;
+}
+
+.navbar li {
+  padding: 8px;
+}
+
+.navbar li a {
+  color: seagreen;
+}
+
+.navbar li a:hover {
+  border-bottom: 1px solid seagreen
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 85vh;
+  width: auto;
+}
+
+.hero div h4 {
+  text-align: right;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer li {
+  padding: 8px;
+}
+
+.footer li a {
+  color: seagreen;
+}
+
+.footer li a:hover {
+  border-bottom: 1px solid seagreen
+}

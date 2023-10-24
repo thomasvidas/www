@@ -1,0 +1,45 @@
+.menu {
+  padding: 8px;
+}
+
+.menu a {
+  color: seagreen;
+}
+
+.menu a:hover {
+  border-bottom: 1px solid seagreen;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 80vh;
+}
+
+.about div {
+  flex-basis: 75%;
+}
+
+.about div h1 {
+  line-height: 1.5;
+}
+
+.about img {
+  flex-basis: 25%;
+  border-radius: 8px;
+  width: auto;
+  height: auto;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    justify-content: left;
+  }
+  .about img {
+    display: none;
+  }
+}
